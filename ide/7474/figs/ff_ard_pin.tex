@@ -1,0 +1,440 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%%  This is the header of a LaTeX2e file exported from Gnumeric.    %%
+%%                                                                  %%
+%%  This file can be compiled as it stands or included in another   %%
+%%  LaTeX document. The table is based on the longtable package so  %%
+%%  the longtable options (headers, footers...) can be set in the   %%
+%%  preamble section below (see PRAMBLE).                           %%
+%%                                                                  %%
+%%  To include the file in another, the following two lines must be %%
+%%  in the including file:                                          %%
+%%        \def\inputGnumericTable{}                                 %%
+%%  at the beginning of the file and:                               %%
+%%        \input{name-of-this-file.tex}                             %%
+%%  where the table is to be placed. Note also that the including   %%
+%%  file must use the following packages for the table to be        %%
+%%  rendered correctly:                                             %%
+%%    \usepackage[latin1]{inputenc}                                 %%
+%%    \usepackage{color}                                            %%
+%%    \usepackage{array}                                            %%
+%%    \usepackage{longtable}                                        %%
+%%    \usepackage{calc}                                             %%
+%%    \usepackage{multirow}                                         %%
+%%    \usepackage{hhline}                                           %%
+%%    \usepackage{ifthen}                                           %%
+%%  optionally (for landscape tables embedded in another document): %%
+%%    \usepackage{lscape}                                           %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%  This section checks if we are begin input into another file or  %%
+%%  the file will be compiled alone. First use a macro taken from   %%
+%%  the TeXbook ex 7.7 (suggestion of Han-Wen Nienhuys).            %%
+\def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax}
+
+
+%%  Check for the \def token for inputed files. If it is not        %%
+%%  defined, the file will be processed as a standalone and the     %%
+%%  preamble will be used.                                          %%
+\ifundefined{inputGnumericTable}
+
+%%  We must be able to close or not the document at the end.        %%
+	\def\gnumericTableEnd{\end{document}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%%  This is the PREAMBLE. Change these values to get the right      %%
+%%  paper size and other niceties.                                  %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\documentclass[12pt%
+			  %,landscape%
+                    ]{report}
+       \usepackage[latin1]{inputenc}
+       \usepackage{fullpage}
+       \usepackage{color}
+       \usepackage{array}
+       \usepackage{longtable}
+       \usepackage{calc}
+       \usepackage{multirow}
+       \usepackage{hhline}
+       \usepackage{ifthen}
+
+	\begin{document}
+
+
+%%  End of the preamble for the standalone. The next section is for %%
+%%  documents which are included into other LaTeX2e files.          %%
+\else
+
+%%  We are not a stand alone document. For a regular table, we will %%
+%%  have no preamble and only define the closing to mean nothing.   %%
+    \def\gnumericTableEnd{}
+
+%%  If we want landscape mode in an embedded document, comment out  %%
+%%  the line above and uncomment the two below. The table will      %%
+%%  begin on a new page and run in landscape mode.                  %%
+%       \def\gnumericTableEnd{\end{landscape}}
+%       \begin{landscape}
+
+
+%%  End of the else clause for this file being \input.              %%
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%%  The rest is the gnumeric table, except for the closing          %%
+%%  statement. Changes below will alter the table's appearance.     %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\providecommand{\gnumericmathit}[1]{#1} 
+%%  Uncomment the next line if you would like your numbers to be in %%
+%%  italics if they are italizised in the gnumeric table.           %%
+%\renewcommand{\gnumericmathit}[1]{\mathit{#1}}
+\providecommand{\gnumericPB}[1]%
+{\let\gnumericTemp=\\#1\let\\=\gnumericTemp\hspace{0pt}}
+ \ifundefined{gnumericTableWidthDefined}
+        \newlength{\gnumericTableWidth}
+        \newlength{\gnumericTableWidthComplete}
+        \newlength{\gnumericMultiRowLength}
+        \global\def\gnumericTableWidthDefined{}
+ \fi
+%% The following setting protects this code from babel shorthands.  %%
+ \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{english}}
+%%  The default table format retains the relative column widths of  %%
+%%  gnumeric. They can easily be changed to c, r or l. In that case %%
+%%  you may want to comment out the next line and uncomment the one %%
+%%  thereafter                                                      %%
+\providecommand\gnumbox{\makebox[0pt]}
+%%\providecommand\gnumbox[1][]{\makebox}
+
+%% to adjust positions in multirow situations                       %%
+\setlength{\bigstrutjot}{\jot}
+\setlength{\extrarowheight}{\doublerulesep}
+
+%%  The \setlongtables command keeps column widths the same across  %%
+%%  pages. Simply comment out next line for varying column widths.  %%
+\setlongtables
+
+\setlength\gnumericTableWidth{%
+	45pt+%
+	19pt+%
+	19pt+%
+	19pt+%
+	19pt+%
+	19pt+%
+	19pt+%
+	19pt+%
+	19pt+%
+	31pt+%
+	31pt+%
+	10pt+%
+	10pt+%
+	17pt+%
+	17pt+%
+0pt}
+\def\gumericNumCols{15}
+\setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
+         \tabcolsep*\gumericNumCols*2+\arrayrulewidth*\gumericNumCols}
+\ifthenelse{\lengthtest{\gnumericTableWidthComplete > \linewidth}}%
+         {\def\gnumericScale{\ratio{\linewidth-%
+                        \tabcolsep*\gumericNumCols*2-%
+                        \arrayrulewidth*\gumericNumCols}%
+{\gnumericTableWidth}}}%
+{\def\gnumericScale{1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%% The following are the widths of the various columns. We are      %%
+%% defining them here because then they are easier to change.       %%
+%% Depending on the cell formats we may use them more than once.    %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{45pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{19pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{19pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColD}}{\newlength{\gnumericColD}}{}\settowidth{\gnumericColD}{\begin{tabular}{@{}p{19pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColE}}{\newlength{\gnumericColE}}{}\settowidth{\gnumericColE}{\begin{tabular}{@{}p{19pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColF}}{\newlength{\gnumericColF}}{}\settowidth{\gnumericColF}{\begin{tabular}{@{}p{19pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColG}}{\newlength{\gnumericColG}}{}\settowidth{\gnumericColG}{\begin{tabular}{@{}p{19pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColH}}{\newlength{\gnumericColH}}{}\settowidth{\gnumericColH}{\begin{tabular}{@{}p{19pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColI}}{\newlength{\gnumericColI}}{}\settowidth{\gnumericColI}{\begin{tabular}{@{}p{19pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColJ}}{\newlength{\gnumericColJ}}{}\settowidth{\gnumericColJ}{\begin{tabular}{@{}p{31pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColK}}{\newlength{\gnumericColK}}{}\settowidth{\gnumericColK}{\begin{tabular}{@{}p{31pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColL}}{\newlength{\gnumericColL}}{}\settowidth{\gnumericColL}{\begin{tabular}{@{}p{10pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColM}}{\newlength{\gnumericColM}}{}\settowidth{\gnumericColM}{\begin{tabular}{@{}p{10pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColN}}{\newlength{\gnumericColN}}{}\settowidth{\gnumericColN}{\begin{tabular}{@{}p{17pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColO}}{\newlength{\gnumericColO}}{}\settowidth{\gnumericColO}{\begin{tabular}{@{}p{17pt*\gnumericScale}@{}}x\end{tabular}}
+
+\begin{tabular}[c]{%
+	b{\gnumericColA}%
+	b{\gnumericColB}%
+	b{\gnumericColC}%
+	b{\gnumericColD}%
+	b{\gnumericColE}%
+	b{\gnumericColF}%
+	b{\gnumericColG}%
+	b{\gnumericColH}%
+	b{\gnumericColI}%
+	b{\gnumericColJ}%
+	b{\gnumericColK}%
+	b{\gnumericColL}%
+	b{\gnumericColM}%
+	b{\gnumericColN}%
+	b{\gnumericColO}%
+	}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  The longtable options. (Caption, headers... see Goosens, p.124) %%
+%	\caption{The Table Caption.}             \\	%
+% \hline	% Across the top of the table.
+%%  The rest of these options are table rows which are placed on    %%
+%%  the first, last or every page. Use \multicolumn if you want.    %%
+
+%%  Header for the first page.                                      %%
+%	\multicolumn{15}{c}{The First Header} \\ \hline 
+%	\multicolumn{1}{c}{colTag}	%Column 1
+%	&\multicolumn{1}{c}{colTag}	%Column 2
+%	&\multicolumn{1}{c}{colTag}	%Column 3
+%	&\multicolumn{1}{c}{colTag}	%Column 4
+%	&\multicolumn{1}{c}{colTag}	%Column 5
+%	&\multicolumn{1}{c}{colTag}	%Column 6
+%	&\multicolumn{1}{c}{colTag}	%Column 7
+%	&\multicolumn{1}{c}{colTag}	%Column 8
+%	&\multicolumn{1}{c}{colTag}	%Column 9
+%	&\multicolumn{1}{c}{colTag}	%Column 10
+%	&\multicolumn{1}{c}{colTag}	%Column 11
+%	&\multicolumn{1}{c}{colTag}	%Column 12
+%	&\multicolumn{1}{c}{colTag}	%Column 13
+%	&\multicolumn{1}{c}{colTag}	%Column 14
+%	&\multicolumn{1}{c}{colTag}	\\ \hline %Last column
+%	\endfirsthead
+
+%%  The running header definition.                                  %%
+%	\hline
+%	\multicolumn{15}{l}{\ldots\small\slshape continued} \\ \hline
+%	\multicolumn{1}{c}{colTag}	%Column 1
+%	&\multicolumn{1}{c}{colTag}	%Column 2
+%	&\multicolumn{1}{c}{colTag}	%Column 3
+%	&\multicolumn{1}{c}{colTag}	%Column 4
+%	&\multicolumn{1}{c}{colTag}	%Column 5
+%	&\multicolumn{1}{c}{colTag}	%Column 6
+%	&\multicolumn{1}{c}{colTag}	%Column 7
+%	&\multicolumn{1}{c}{colTag}	%Column 8
+%	&\multicolumn{1}{c}{colTag}	%Column 9
+%	&\multicolumn{1}{c}{colTag}	%Column 10
+%	&\multicolumn{1}{c}{colTag}	%Column 11
+%	&\multicolumn{1}{c}{colTag}	%Column 12
+%	&\multicolumn{1}{c}{colTag}	%Column 13
+%	&\multicolumn{1}{c}{colTag}	%Column 14
+%	&\multicolumn{1}{c}{colTag}	\\ \hline %Last column
+%	\endhead
+
+%%  The running footer definition.                                  %%
+%	\hline
+%	\multicolumn{15}{r}{\small\slshape continued\ldots} \\
+%	\endfoot
+
+%%  The ending footer definition.                                   %%
+%	\multicolumn{15}{c}{That's all folks} \\ \hline 
+%	\endlastfoot
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hhline{|-|----|----|--|----}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\setlength{\gnumericMultiRowLength}{0pt}%
+	 \addtolength{\gnumericMultiRowLength}{\gnumericColA}%
+	 \multirow{2}[1]{\gnumericMultiRowLength}{%
+	 }}
+	&\multicolumn{4}{p{	\gnumericColB+%
+	\gnumericColC+%
+	\gnumericColD+%
+	\gnumericColE+%
+	\tabcolsep*2*3}|}%
+	{\gnumericPB{\centering}\textbf{INPUT}}
+	&\multicolumn{4}{p{	\gnumericColF+%
+	\gnumericColG+%
+	\gnumericColH+%
+	\gnumericColI+%
+	\tabcolsep*2*3}|}%
+	{\gnumericPB{\centering}\textbf{OUTPUT}}
+	&\multicolumn{2}{c|}%
+	{\setlength{\gnumericMultiRowLength}{0pt}%
+	 \addtolength{\gnumericMultiRowLength}{\gnumericColJ}%
+	 \addtolength{\gnumericMultiRowLength}{\gnumericColK}%
+	 \addtolength{\gnumericMultiRowLength}{\tabcolsep}%
+	 \multirow{2}[1]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
+	 \gnumericPB{\centering}CLOCK}}}
+	&\multicolumn{4}{c|}%
+	{\setlength{\gnumericMultiRowLength}{0pt}%
+	 \addtolength{\gnumericMultiRowLength}{\gnumericColL}%
+	 \addtolength{\gnumericMultiRowLength}{\gnumericColM}%
+	 \addtolength{\gnumericMultiRowLength}{\tabcolsep}%
+	 \addtolength{\gnumericMultiRowLength}{\gnumericColN}%
+	 \addtolength{\gnumericMultiRowLength}{\tabcolsep}%
+	 \addtolength{\gnumericMultiRowLength}{\gnumericColO}%
+	 \addtolength{\gnumericMultiRowLength}{\tabcolsep}%
+	 \multirow{3}[1]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
+	 \gnumericPB{\centering}5V}}}
+\\
+\hhline{~|-|-|-|--|-|-|-|~~~~~~}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}W}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\centering}X}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\centering}Y}
+	&\multicolumn{1}{p{\gnumericColE}|}%
+	{\gnumericPB{\centering}Z}
+	&\multicolumn{1}{p{\gnumericColF}|}%
+	{\gnumericPB{\centering}A}
+	&\multicolumn{1}{p{\gnumericColG}|}%
+	{\gnumericPB{\centering}B}
+	&\multicolumn{1}{p{\gnumericColH}|}%
+	{\gnumericPB{\centering}C}
+	&\multicolumn{1}{p{\gnumericColI}|}%
+	{\gnumericPB{\centering}D}
+	&
+	&\multicolumn{1}{p{\gnumericColK}|}%
+	{}
+	&
+	&
+	&
+	&\multicolumn{1}{p{\gnumericColO}|}%
+	{}
+\\
+\hhline{|-----------|~~~~}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}Arduino}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}D6}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\centering}D7}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\centering}D8}
+	&\multicolumn{1}{p{\gnumericColE}|}%
+	{\gnumericPB{\centering}D9}
+	&\multicolumn{1}{p{\gnumericColF}|}%
+	{\gnumericPB{\centering}D2}
+	&\multicolumn{1}{p{\gnumericColG}|}%
+	{\gnumericPB{\centering}D3}
+	&\multicolumn{1}{p{\gnumericColH}|}%
+	{\gnumericPB{\centering}D4}
+	&\multicolumn{1}{p{\gnumericColI}|}%
+	{\gnumericPB{\centering}D5}
+	&\multicolumn{2}{p{	\gnumericColJ+%
+	\gnumericColK+%
+	\tabcolsep*2*1}|}%
+	{\gnumericPB{\centering}D13}
+	&
+	&
+	&
+	&\multicolumn{1}{p{\gnumericColO}|}%
+	{}
+\\
+\hhline{|----|----|--|--|-|-|-|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}7474}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}5}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\centering}9}
+	&\multicolumn{2}{p{	\gnumericColD+%
+	\gnumericColE+%
+	\tabcolsep*2*1}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColF}|}%
+	{\gnumericPB{\centering}2}
+	&\multicolumn{1}{p{\gnumericColG}|}%
+	{\gnumericPB{\centering}12}
+	&\multicolumn{2}{p{	\gnumericColH+%
+	\gnumericColI+%
+	\tabcolsep*2*1}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColJ}|}%
+	{\gnumericPB{\centering}CLK1}
+	&\multicolumn{1}{p{\gnumericColK}|}%
+	{\gnumericPB{\centering}CLK2}
+	&\multicolumn{1}{p{\gnumericColL}|}%
+	{\gnumericPB{\centering}1}
+	&\multicolumn{1}{p{\gnumericColM}|}%
+	{\gnumericPB{\centering}4}
+	&\multicolumn{1}{p{\gnumericColN}|}%
+	{\gnumericPB{\centering}10}
+	&\multicolumn{1}{p{\gnumericColO}|}%
+	{\gnumericPB{\centering}13}
+\\
+\hhline{|----|----|-------|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}7474}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\centering}5}
+	&\multicolumn{1}{p{\gnumericColE}|}%
+	{\gnumericPB{\centering}9}
+	&\multicolumn{1}{p{\gnumericColF}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColG}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColH}|}%
+	{\gnumericPB{\centering}2}
+	&\multicolumn{1}{p{\gnumericColI}|}%
+	{\gnumericPB{\centering}12}
+	&\multicolumn{1}{p{\gnumericColJ}|}%
+	{\gnumericPB{\centering}CLK1}
+	&\multicolumn{1}{p{\gnumericColK}|}%
+	{\gnumericPB{\centering}CLK2}
+	&\multicolumn{1}{p{\gnumericColL}|}%
+	{\gnumericPB{\centering}1}
+	&\multicolumn{1}{p{\gnumericColM}|}%
+	{\gnumericPB{\centering}4}
+	&\multicolumn{1}{p{\gnumericColN}|}%
+	{\gnumericPB{\centering}10}
+	&\multicolumn{1}{p{\gnumericColO}|}%
+	{\gnumericPB{\centering}13}
+\\
+\hhline{|--|-|-|--------|-|-|-|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}7447}
+	&\multicolumn{4}{p{	\gnumericColB+%
+	\gnumericColC+%
+	\gnumericColD+%
+	\gnumericColE+%
+	\tabcolsep*2*3}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColF}|}%
+	{\gnumericPB{\centering}7}
+	&\multicolumn{1}{p{\gnumericColG}|}%
+	{\gnumericPB{\centering}1}
+	&\multicolumn{1}{p{\gnumericColH}|}%
+	{\gnumericPB{\centering}2}
+	&\multicolumn{1}{p{\gnumericColI}|}%
+	{\gnumericPB{\centering}6}
+	&\multicolumn{1}{p{\gnumericColJ}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColK}|}%
+	{}
+	&\multicolumn{4}{p{	\gnumericColL+%
+	\gnumericColM+%
+	\gnumericColN+%
+	\gnumericColO+%
+	\tabcolsep*2*3}|}%
+	{\gnumericPB{\centering}16}
+\\
+\hhline{|-|----|-|-|-|-|-|-|----|}
+\end{tabular}
+
+\ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
+\gnumericTableEnd

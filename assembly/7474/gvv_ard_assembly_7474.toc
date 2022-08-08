@@ -1,0 +1,4 @@
+\contentsline {section}{\numberline {1}Components}{1}
+\contentsline {section}{\numberline {2}Using the 7474 D-Flip Flops}{1}
+\contentsline {section}{\numberline {3}Using Internal Memory and and Loop}{1}
+\contentsline {section}{References}{2}

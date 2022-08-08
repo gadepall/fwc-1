@@ -1,0 +1,17 @@
+\usetikzlibrary{arrows,automata, positioning, calc}
+%\usetikzlibrary{arrows,automata, calc}
+%\begin{tikzpicture}[->,shorten >=1pt,node distance=2cm,on grid,auto] 
+\begin{tikzpicture}[->,auto] 
+   \node[ ] (s_00)   {}; 
+   \foreach \i [count=\ni from 1] in {36,72,...,324}
+%       \node[state] (s_\ni) [above right = {2*sin(\i)} and {2*(cos(\i)} of s_00]  {\ni};
+        \node[state] (s_\ni) [above right = {2*sin(\i)} and {2*(cos(\i)} of s_00]  {$s_{\ni}$};        
+        
+        \node[state,initial] (s_0) [above right = {0} and {2} of s_00]  {$s_0$};     
+
+   \foreach \i  [count=\j from 1] in {0,1,...,8}
+		\path	(s_\i) edge [bend right]  (s_\j) ;
+
+		\path	(s_9) edge [bend right]  (s_0) ;		
+           
+\end{tikzpicture}

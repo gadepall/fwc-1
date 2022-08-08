@@ -1,0 +1,74 @@
+%\documentclass{standalone}
+%\usepackage{tikz}
+%\usepackage{amsmath,amssymb}
+%\makeatletter
+%\newsavebox\myboxA
+%\newsavebox\myboxB
+%\newlength\mylenA
+%\newcommand*\xoverline[2][0.75]{%
+%    \sbox{\myboxA}{$\m@th#2$}%
+%    \setbox\myboxB\null% Phantom box
+%    \ht\myboxB=\ht\myboxA%
+%    \dp\myboxB=\dp\myboxA%
+%    \wd\myboxB=#1\wd\myboxA% Scale phantom
+%    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+%    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+%    \addtolength\mylenA{-\the\wd\myboxB}%
+%    \ifdim\wd\myboxB<\wd\myboxA%
+%       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+%    \else
+%        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+%    \fi}
+%\makeatother
+%
+%
+%\begin{document}
+
+\begin{tikzpicture}[scale=1,
+     pin/.style={draw,rectangle,minimum width=2em,font=\small}
+     ]
+%   \clip (18,.5) rectangle (5,2);           
+%Vertices of the main display rectangle
+\def \xmin{0}
+\def \xmax{17}
+\def \ymin{0}
+\def \ymax{6}
+
+%Number of pins on a side
+\def \n{7}
+\def \k{1.6}
+
+%Draw the display rectangle
+
+
+%Define height of pins and their separation
+\def \height{2}
+\pgfmathsetmacro{\centx}{(\xmax+\xmin)/2}
+\pgfmathsetmacro{\centy}{(\ymax+\ymin)/2}
+\pgfmathsetmacro{\wid}{(\xmax-\xmin)/(\n-1)}
+
+
+\draw ({\xmin-0.5*\wid},\ymin)rectangle ({\xmax+0.5*\wid},\ymax);
+
+%Defining y axis divisions
+\pgfmathsetmacro{\ywid}{(\ymin-\ymax)/(\n-2)}
+
+%Putting text 7447 at the centre
+   \node at (\centx,\centy) {\textbf{\LARGE{7474}}};
+
+      
+\foreach [count=\i] \k in {$V_{CC}$,,D2,CLK2,,Q2,}
+   {
+\pgfmathsetmacro{\j}{int(round(15-\i)}
+\draw node[pin,anchor=center] at ({\xmin+(\i-1)*\wid},{\ymin-0.15*\wid}){\LARGE \i};
+\draw node[pin,anchor=center] at ({\xmin+(\i-1)*\wid},{\ymax+0.15*\wid}){\LARGE \j};
+            \node (\i) at ( {\xmin+(\i-1)*\wid},{\ymax+0.45*\wid}) {\LARGE \k} ;
+   }
+
+\foreach [count=\i] \k in {,D1,CLK1,,Q1,,GND}
+{
+            \node (\i) at ( {\xmin+(\i-1)*\wid},{\ymin-0.45*\wid}) {\LARGE \k} ;              
+ }
+\draw (-0.5*\wid,{\centy-0.5}) arc (-90:90:0.5) ;
+ \end{tikzpicture}
+%\end{document}

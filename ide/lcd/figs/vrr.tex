@@ -1,0 +1,24 @@
+\begin{circuitikz}[american]
+      \draw (0,2) node[ocirc,label={[font=\footnotesize]below:$V_{CC}$}] {}
+%      to[V=$V_{CC}$, invert] (0,2) % The voltage source
+%      to[short] (2,2)
+    to[R=$R_1 (known)$] (2,2) % The resistor
+      to[R=$R_2 (unknown)$] (2,0)
+      to (2,-0.5) node[ground]{GND}      ; % The resistor
+%      to[short] (0,0);
+\draw (2,2)   to [short, -o]   (4,2) node[label={[font=\footnotesize]above:$A0$}] {};
+%\draw (2,0)   to [short, -o]   (4,0);
+%\draw (2,-0.5) node[ground]{GND}  to[short] (2,0);
+\end{circuitikz}
+
+%\begin{circuitikz}[american]
+%      \draw (0,0)
+%      to[V=$V_{CC}$, invert] (0,2) % The voltage source
+%%      to[short] (2,2)
+%    to[R=$R_1$] (2,2) % The resistor
+%      to[R=$R_2$] (2,0) % The resistor
+%      to[short] (0,0);
+%\draw (2,2)   to [short, -o]   (4,2) node[label={[font=\footnotesize]above:$A3$}] {};
+%%\draw (2,0)   to [short, -o]   (4,0);
+%\draw (2,-0.5) node[ground]{GND}  to[short] (2,0);
+%\end{circuitikz}

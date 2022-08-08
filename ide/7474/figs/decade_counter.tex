@@ -1,0 +1,100 @@
+%\documentclass{article}
+
+%\usepackage[latin1]{inputenc}
+%\usepackage{tikz}
+%\usetikzlibrary{shapes,arrows}
+
+%%%%<
+%\usepackage{verbatim}
+%\usepackage[active,tightpage]{preview}
+%\PreviewEnvironment{tikzpicture}
+%\setlength\PreviewBorder{5pt}%
+%%%%>
+
+%\begin{comment}
+%:Title: Simple flow chart
+%:Tags: Diagrams
+
+%With PGF/TikZ you can draw flow charts with relative ease. This flow chart from [1]_
+%outlines an algorithm for identifying the parameters of an autonomous underwater vehicle model. 
+
+%Note that relative node
+%placement has been used to avoid placing nodes explicitly. This feature was
+%introduced in PGF/TikZ >= 1.09.
+
+%.. [1] Bossley, K.; Brown, M. & Harris, C. Neurofuzzy identification of an autonomous underwater vehicle `International Journal of Systems Science`, 1999, 30, 901-913 
+
+
+%\end{comment}
+
+
+%\begin{document}
+%\pagestyle{empty}
+
+
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+%\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+%    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{block} = [rectangle, draw, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+    
+\begin{tikzpicture}[node distance = 3cm, auto]
+    % Place nodes
+    \node [block] (init) {Incrementing Decoder \\ (Arduino)};
+%    \node [cloud, left of=init] (expert) {expert};
+%    \node [cloud, right of=init] (system) {system};
+    \node [block, below of=init, node distance = 4cm] (identify) {Display Decoder};
+    \node [block, below of=identify ] (evaluate) {Seven-Segment Display};
+%    \node [block, right of=identify, node distance = 4cm] (delay) {Delay};
+     %\node [block, (4,-3)] (q1) {Delay};
+	\node at (4,-2)[block] (delay) {Delay};
+\begin{scope}[->,>=latex]
+    \foreach \i in {-3,-1,1,3}
+    { 
+%      \draw[->] ([yshift=\i * 0.2 cm]identify.east) -- ([yshift=\i * 0.2 cm]delay.west) ;
+      \draw[->] ([xshift=\i * 0.2 cm]delay.north) |- ([yshift=\i * 0.2 cm]init.east) ;
+      \draw[->] ([xshift=\i * 0.2 cm]init.south) -- ([xshift=\i * 0.2 cm]identify.north) ;
+       \draw node at (\i * 0.2,-2+\i * 0.2) { \textbullet} ;
+       \draw[->] (\i * 0.2,-2+\i * 0.2) -- ([yshift=\i * 0.2 cm]delay.west) ;
+      
+    }
+\foreach \i in {-3,...,3}
+    { 
+      \draw[->] ([xshift=\i * 0.35 cm]identify.south) -- ([xshift=\i * 0.35 cm]evaluate.north) ;
+    }
+\foreach [count=\i] \j in {a,b,...,g}{
+            \node (\i) at ( 1.6-\i * 0.35, -5.5) {\j} ;
+            }
+\foreach [count=\i] \j in {A,B,C,D}{
+            \node (\i) at ( 0.8-\i * 0.4, -1.0-\i*0.4) {\j} ;
+            }
+
+\foreach [count=\i] \j in {W,X,Y,Z}{
+            \node (\i) at ( 1.6, 1.2-\i*0.4) {\j} ;
+            }
+    
+\end{scope}
+
+ %   \node [block, left of=evaluate, node distance=3cm] (update) {update model};
+  %  \node [decision, below of=evaluate] (decide) {is best candidate better?};
+%    \node [block, below of=decide, node distance=3cm] (stop) {stop};
+    % Draw edges
+%    \path [line] (init) -- (identify);
+    \path [line] (identify) -- (evaluate);
+%    \path [line] (evaluate) -- (decide);
+  %  \path [line] (decide) -| node [near start] {yes} (update);
+   % \path [line] (update) |- (identify);
+ %   \path [line] (decide) -- node {no}(stop);
+%    \path [line,dashed] (expert) -- (init);
+%    \path [line,dashed] (system) -- (init);
+%    \path [line,dashed] (system) |- (evaluate);
+\end{tikzpicture}
+%}
+
+%\end{document}

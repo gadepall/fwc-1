@@ -1,0 +1,70 @@
+\subsection{Driving the Segments}
+Open the arduino software.  Check if the ports show Arduino Uno and click the appropriate button.  Open Examples$\rightarrow$Basics$\rightarrow$Blink.  You will obtain the following program
+
+\input{blink}
+
+
+\begin{problem}
+	Connect the digital pin 13 of the arduino to the {\em dot} pin of the display. Execute the Blink program.
+\end{problem}
+\begin{problem}
+Change the delay to 500 ms in the program and execute.  What do you observe?
+\end{problem}
+\begin{problem}
+Connect the A-D pins of the 7447 IC to the pins D2-D5 of the Arduino.
+	\end{problem}	
+\begin{problem}
+Modify the blink program to get the following code and execute. What do you observe?
+\input{ard_decoder_drive}
+\end{problem}
+\begin{problem}
+Now generate the numbers 1-9 by modifying the above program.
+\end{problem}
+\begin{problem}
+Before the following line in the previous code,
+\begin{verbatim}
+void setup() {
+\end{verbatim}
+you can define integer variables as
+\begin{verbatim}
+int A = 0;
+\end{verbatim}	
+where the variable A is defined to be an integer and given the values 0.  Define variables A,B,C,D as 0 or 1 and use the digitalWrite() command as in the earlier code to generate the numbers 1-9.
+\end{problem}
+\begin{problem}
+Write a module for decimal to binary conversion
+according to the example given below
+\input{conversion}
+%
+ and use it in the above code so that decimal values are given as input in the program and observed as output in the display. Note that the following code
+\begin{verbatim}
+a % b
+\end{verbatim}
+can be used to obtain the remainder when a is divided by b and
+\begin{verbatim}
+a/b
+\end{verbatim}
+gives the quotient.
+\end{problem}
+\subsection{Combinational Logic}
+\begin{problem}
+Generate the boolean functions for the segments $a-f$ using the table in Problem \ref{bcd_ss}
+\end{problem}
+\begin{problem}
+Use the boolean functions obtained above to drive the display directly without using the 7447 decoder.  The $\&\&$ operand is used for the boolean AND operation, the $||$ operand is used for the OR operation and the ! operand is used for the NOT operation in Arduino code.
+\end{problem}
+\begin{problem}
+Simplify the above functions using a Karnaugh map (K-map).  An example for the segment a is given below
+\begin{center}
+\includegraphics[scale=1]{kmap}
+\end{center}
+and results in the function
+%
+\begin{equation*}
+a = A + C + \bar{B}\bar{D}+ BD
+\end{equation*}
+%
+\end{problem}
+\begin{problem}
+Use the simplified expressions obtained using the K-map in the program to drive the display.
+\end{problem}

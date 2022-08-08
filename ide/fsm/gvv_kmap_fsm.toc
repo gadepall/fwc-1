@@ -1,0 +1,3 @@
+\contentsline {section}{\numberline {1}The Decade Counter}{1}{section.1}
+\contentsline {section}{\numberline {2}Finite State Machine}{1}{section.2}
+\contentsline {section}{References}{2}{section*.5}

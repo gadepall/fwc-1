@@ -1,0 +1,73 @@
+%\documentclass{standalone}
+%\usepackage{tikz}
+%\usepackage{amsmath,amssymb}
+\makeatletter
+\newsavebox\myboxA
+\newsavebox\myboxB
+\newlength\mylenA
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+\makeatother
+
+
+%\begin{document}
+\begin{tikzpicture}[scale=1,
+     pin/.style={draw,rectangle,minimum width=2em,font=\small}
+     ]
+   % Main trick: loop over the label numbers and then adjust their position
+   % in the tikzpicture using evaluate to calculate \y=y-coordinate of pin
+
+   \foreach \i/\desc [evaluate=\i  as \x using (\i+4.8 )]
+      in {1/\tiny{B},
+          2/\tiny{C},
+          3/\tiny{\xoverline{LT}},
+          4/\tiny{\xoverline{BI/RBO}},
+          5/\tiny{\xoverline{RBI}},
+          6/\tiny{D},
+          7/\tiny{A},
+          8/\tiny{GND}}
+   {
+     \draw node[pin,anchor=east,rotate=360] at (\x,-0.233){\small$\i$};
+     \node[align=right,anchor=east,rotate=360] at (\x,-.8){\desc};
+   }
+  
+   \foreach \i/\desc [evaluate=\i as \x using (21.1-\i)]
+      in { 9/\xoverline{e},
+          10/\xoverline{d},
+          11/\xoverline{c},
+          12/\xoverline{b},
+          13/\xoverline{a},
+          14/\xoverline{g},
+          15/\xoverline{f},
+          16/{V$_{\text{CC}}$}}
+   {
+     \draw node[pin,anchor=west,rotate=360] at (\x,3.22){\small$\i$};
+     \node[align=right,anchor=west,rotate=360] at (\x,3.8){\desc};
+   }
+   \draw
+      (5,0.8)--(5,3)--(5,3)--(13,3)--(13,3)
+             --(13,0.8)--(13,0)--(5,0)--cycle;
+    \begin{scope}         
+    \clip (18,.5) rectangle (5,2);         
+   \draw(5.2,1.5)circle[radius=0.4];
+   \end{scope}
+   \begin{scope}
+   \clip (0,-1.5) rectangle (1.5,1.5);
+    \draw (2,) circle(6.5);
+\end{scope}
+
+   \node at (9,1.5){\textbf{\LARGE{7447}}};
+ \end{tikzpicture}
+%\end{document}

@@ -1,0 +1,2 @@
+\contentsline {section}{\numberline {1}Incrementing Decoder}{1}{section.1}
+\contentsline {section}{\numberline {2}Karnaugh Map}{1}{section.2}

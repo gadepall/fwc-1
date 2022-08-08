@@ -1,0 +1,114 @@
+%\documentclass{standalone}
+%\usepackage{tikz}
+%\usepackage{amsmath,amssymb}
+%\makeatletter
+%\newsavebox\myboxA
+%\newsavebox\myboxB
+%\newlength\mylenA
+%\newcommand*\xoverline[2][0.75]{%
+%    \sbox{\myboxA}{$\m@th#2$}%
+%    \setbox\myboxB\null% Phantom box
+%    \ht\myboxB=\ht\myboxA%
+%    \dp\myboxB=\dp\myboxA%
+%    \wd\myboxB=#1\wd\myboxA% Scale phantom
+%    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+%    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+%    \addtolength\mylenA{-\the\wd\myboxB}%
+%    \ifdim\wd\myboxB<\wd\myboxA%
+%       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+%    \else
+%        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+%    \fi}
+%\makeatother
+
+
+%\begin{document}
+
+\begin{tikzpicture}[scale=1,
+     pin/.style={draw,rectangle,minimum width=2em,font=\small}
+     ]
+%   \clip (18,.5) rectangle (5,2);           
+%Vertices of the main display rectangle
+\def \xmin{0}
+\def \xmax{17}
+\def \ymin{0}
+\def \ymax{6}
+
+%Number of pins on a side
+\def \n{8}
+\def \k{1.6}
+
+%Draw the display rectangle
+
+
+%Define height of pins and their separation
+\def \height{2}
+\pgfmathsetmacro{\centx}{(\xmax+\xmin)/2}
+\pgfmathsetmacro{\centy}{(\ymax+\ymin)/2}
+\pgfmathsetmacro{\wid}{(\xmax-\xmin)/(\n-1)}
+
+
+\draw ({\xmin-0.5*\wid},\ymin)rectangle ({\xmax+0.5*\wid},\ymax);
+%\node (G) at (\centx,\centy) [draw,thick,minimum width=12.6cm,minimum height=4.8] {};
+
+
+%Putting text 7447 at the centre
+   \node at (\centx,\centy) {\textbf{\LARGE{LCD $ 16  \times 2$}}};
+%   \node at (-1,0) {\textbf{$1$}};
+%    \node at (14,0) {\textbf{$16$}};
+
+      
+\foreach [count=\i] \k in {}
+   {
+\pgfmathsetmacro{\j}{int(round(17-\i)}
+
+            \node (\i) at ( {\xmin+(\i-1)*\wid},{\ymax+0.45*\wid}) {\LARGE \k} ;
+   }
+
+\foreach [count=\i] \k in {}
+{
+            \node (\i) at ( {\xmin+(\i-1)*\wid},{\ymin-0.45*\wid}) {\LARGE \k} ;              
+ }
+\node(G) at (1,0){};
+\foreach \x in {1,...,16}
+\node[above=2pt] at (\x,0) {\x};
+% \node(G)[rectangle,fill=red!5,draw=red,text width=5cm]{};
+%\node(Vcc)[below of=G]{Vcc};
+\node(GND)[below of=G]{GND};
+\node(Vcc)[right of=GND]{Vcc};
+\node(Vee)[right of=Vcc]{Vee};
+\node(RS)[right of=Vee]{RS};
+\node(RW)[right of=RS]{RW};
+\node(EN)[right of=RW]{EN};
+\node(DB0)[right of=EN]{DB0};
+\node(DB1)[right of=DB0]{DB1};
+\node(DB2)[right of=DB1]{DB2};
+\node(DB3)[right of=DB2]{DB3};
+\node(DB4)[right of=DB3]{DB4};
+\node(DB5)[right of=DB4]{DB5};
+\node(DB6)[right of=DB5]{DB6};
+\node(DB7)[right of=DB6]{DB7};
+\node(LED+)[right of=DB7]{LED+};
+\node(LED-)[right of=LED+]{LED-};
+\draw[-](G.south)-|(GND.north);
+\draw[-](G.south)-|(Vcc.north);
+\draw[-](G.south)-|(Vee.north);
+\draw[-](G.south)-|(RS.north);
+\draw[-](G.south)-|(RW.north);
+\draw[-](G.south)-|(EN.north);
+\draw[-](G.south)-|(DB0.north);
+\draw[-](G.south)-|(DB1.north);
+\draw[-](G.south)-|(DB2.north);
+\draw[-](G.south)-|(DB3.north);
+\draw[-](G.south)-|(DB4.north);
+\draw[-](G.south)-|(DB5.north);
+\draw[-](G.south)-|(DB6.north);
+\draw[-](G.south)-|(DB7.north);
+\draw[-](G.south)-|(LED+.north);
+\draw[-](G.south)-|(LED-.north);
+\end{tikzpicture}
+%\endpgfgraphicnamed
+%\end{document}
+
+%% \end{tikzpicture}
+%\end{document}

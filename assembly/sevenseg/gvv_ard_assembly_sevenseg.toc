@@ -1,0 +1,2 @@
+\contentsline {section}{\numberline {1}Components}{1}
+\contentsline {section}{\numberline {2}Controlling the Display}{1}

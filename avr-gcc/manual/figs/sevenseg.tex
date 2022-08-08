@@ -1,0 +1,65 @@
+
+
+\begin{tikzpicture}
+  [
+    scale=1,
+    >=stealth,
+    point/.style = {draw, circle,  fill = black, inner sep = 0.5pt},
+    dot/.style   = {draw, circle,  fill = black, inner sep = .2pt},
+  ]
+
+%Vertices of the main display rectangle
+\def \xmin{0}
+\def \xmax{6}
+\def \ymin{0}
+\def \ymax{-9}
+
+%Number of pins on a side
+\def \n{5}
+\def \k{1.6}
+
+%Draw the display rectangle
+\draw[ultra thick] (\xmin,\ymin)rectangle (\xmax,\ymax);
+
+%Define height of pins and their separation
+\def \height{2}
+\pgfmathsetmacro{\wid}{(\xmax-\xmin)/(\n-1)}
+
+%Defining y axis divisions
+\pgfmathsetmacro{\ywid}{(\ymin-\ymax)/(\n-2)}
+
+\foreach \i in {0,...,4}
+{
+\draw[ultra thick] (\xmin + \i*\wid, \ymin) -- (\xmin + \i*\wid, \ymin + \height); 
+\draw[ultra thick] (\xmin + \i*\wid, \ymax) -- (\xmin + \i*\wid, \ymax -\height); 
+}
+%%
+%%%
+\foreach [count=\i] \j in {g,f,COM,a,b}{
+            \node (\i) at ( -1.5 + \i*\wid,\height+0.2) {\j} ;
+            }
+\foreach [count=\i] \j in {e,d,COM,c,dot}{
+            \node (\i) at ( -1.5 + \i*\wid,\ymax -\height-0.2) {\j} ;
+            }
+
+\foreach [count=\i] \j in {\textbf{a},\textbf{g},\textbf{d}}
+{            
+\draw[ultra thick] (\xmin+1.1*\wid,{\ymin-(\i-0.5)*\ywid} ) rectangle +(\k*\wid,0.3 );
+\node (\i) at ( \xmin + 2*\wid,{\ymin-(\i-0.7)*\ywid}) {\j} ;
+}
+\foreach [count=\i] \j in {\textbf{f},\textbf{e}}
+{            
+\draw[ultra thick] (\xmin+\wid,{\ymin-(\i+0.35)*\ywid} ) rectangle +(0.3,\k*\wid );
+\node (\i) at ( \xmin + \wid-0.5,{\ymin-(\i-0.05)*\ywid}) {\j} ;
+}
+\foreach [count=\i] \j in {\textbf{b},\textbf{c}}
+{            
+\draw[ultra thick] (\xmin+2.6*\wid,{\ymin-(\i+0.35)*\ywid } ) rectangle +(0.3,\k*\wid );
+\node (\i) at ( \xmin + 3*\wid,{\ymin-(\i-0.05)*\ywid}) {\j} ;
+}
+
+
+%
+\draw[ultra thick] (\xmax - 0.5*\wid,{\ymax+0.25*\ywid}) circle [radius=0.2];
+\draw[ultra thick](\xmax - 0.5*\wid,{\ymax+0.25*\ywid}) node[sloped, anchor=center, above, text width=2.0cm]{\textbf{dot}};    
+\end{tikzpicture}
