@@ -334,6 +334,12 @@ apt install curl git wget subversion proot proot-distro python  nmap neovim rang
 \begin{lstlisting}
 proot-distro install debian
 proot-distro login debian
+\end{lstlisting}
+\end{enumerate}
+\section{Platformio }
+\begin{enumerate}[1.]
+	\item Install Packages
+\begin{lstlisting}
 apt update && apt upgrade
 apt install apt-utils build-essential cmake neovim
 apt install git  wget  subversion imagemagick  nano  
@@ -348,24 +354,25 @@ apt install python3-pip python3-numpy python3-scipy python3-matplotlib python3-m
 pip3 install platformio
 #------------------ End installing python3 on termuxubuntu----------------------------
 \end{lstlisting}
-
-\end{enumerate}
-\section{Arduino Droid}
-\begin{enumerate}[1.]
-\item Install ArduinoDroid from apkpure
-\item Open ArduinoDroid and grant all permissions
-\item Execute the following on termuxubuntu
+\item Execute the following on debian
 \begin{lstlisting}
 cd /sdcard/Download
 svn co https://github.com/gadepall/fwc-1/trunk/ide/piosetup/codes
 cd codes
 pio run
 \end{lstlisting}
-This will generate the .hex file in 
+\item Connect your arduino to the  laptop/rpi and type
 \begin{lstlisting}
-.pio/build/uno/firmware.hex
+pio run -t nobuild -t upload
 \end{lstlisting}
-subdirectory.
+\item The LED beside pin 13 will start
+blinking.
+
+\end{enumerate}
+\section{Arduino Droid}
+\begin{enumerate}[1.]
+\item Install ArduinoDroid from apkpure
+\item Open ArduinoDroid and grant all permissions
 \item Connect the Arduino to your phone via USB-OTG
 \item For flashing the bin files, in ArduinoDroid,
 \begin{lstlisting}

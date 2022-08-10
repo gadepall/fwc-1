@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.27)  8 AUG 2022 06:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.7.27)  10 AUG 2022 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1047,27 +1047,31 @@ File: utxsyc.fd 2000/12/15 v3.1
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
 LaTeX Font Info:    Trying to load font information for OML+txr on input line 3
-72.
+79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxr.fd
 File: omltxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OML/txr/m/n' in size <12> not available
-(Font)              Font shape `OML/txmi/m/it' tried instead on input line 372.
+(Font)              Font shape `OML/txmi/m/it' tried instead on input line 379.
 
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
+ [2
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  34348 strings out of 478287
  817436 string characters out of 5849289
- 1683258 words of memory out of 5000000
+ 1672259 words of memory out of 5000000
  52092 multiletter control sequences out of 15000+600000
  532517 words of font info for 152 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 84i,6n,80p,662b,1554s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,7n,80p,662b,1678s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
 r/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-d
@@ -1075,10 +1079,10 @@ ist/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (1 page, 51013 bytes).
+Output written on main.pdf (2 pages, 52504 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
+ 50 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
