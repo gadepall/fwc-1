@@ -22,3 +22,12 @@ https://docs.google.com/spreadsheets/d/1Yx2RJ2wzbmdDdHaq0Kko0K7FPrdS0m7DWsyzDD_3
 Section 2 in
 
 https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
+
+#Arduino IDE
+
+https://github.com/gadepall/fwc-1/tree/main/ide
+
+
+#Arduino on Android Phone
+
+https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
