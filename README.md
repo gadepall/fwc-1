@@ -40,6 +40,12 @@ https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
 
 #6.  Matrices and Optimization Manual
 
+#Installing Python
+
+sudo apt install python3-pip python3-numpy python3-scipy python3-matplotlib python3-mpmath python3-sympy python3-cvxopt
+
+sudo pip3 install cvxpy
+
 #Class 10, Section 5
 
 https://github.com/gadepall/cbse-papers/blob/main/2020/math/10/solutions/main.pdf
