@@ -37,3 +37,17 @@ sudo apt install texlive-full gnumeric
 #5.  Arduino on Android Phone
 
 https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
+
+#6.  Matrices and Optimization Manual
+
+#Class 10, Section 5
+
+https://github.com/gadepall/cbse-papers/blob/main/2020/math/10/solutions/main.pdf
+
+svn co https://github.com/gadepall/cbse-papers/trunk/2020/math/10/solutions 10
+
+#Class 12, Sections 1 and 5
+
+https://github.com/gadepall/cbse-papers/blob/main/2020/math/12/solutions/main.pdf
+
+svn co https://github.com/gadepall/cbse-papers/trunk/2020/math/12/solutions 12
