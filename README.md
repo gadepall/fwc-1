@@ -15,7 +15,6 @@ sudo apt update && apt upgrade
 sudo apt install build-essential openssh
 
 sudo apt install curl git wget subversion python3  
-#-------
 
 #1.  Installing neovim and ranger
 
