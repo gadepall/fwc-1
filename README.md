@@ -69,3 +69,6 @@ https://github.com/gadepall/cbse-papers/blob/main/2020/math/12/solutions/main.pd
 svn co https://github.com/gadepall/cbse-papers/trunk/2020/math/12/solutions 12
 
 Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9uPnPqucP145qh9l7nGB3pm
+
+#Class 10, Coding
+Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-
