@@ -35,18 +35,46 @@ https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
 
 https://github.com/gadepall/fwc-1/tree/main/ide
 
+
 #4.  LaTeX Report for Arduino IDE
 
 svn co https://github.com/gadepall/training/trunk/math
 
 sudo apt install texlive-full gnumeric
 
+#5. SSH to Termux
 
-#5.  Arduino on Android Phone
+#Follow instructions in Section 1 of 
 
 https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
 
-#6.  Matrices and Optimization Manual
+#On termux on your phone
+
+#Enter a simple password
+passwd
+
+#This will give you your username
+whoami
+
+#Find your ip address
+ifconfig 
+
+#Start ssh server on your mobile 
+sshd
+
+#On your laptop
+ssh username@ipaddress -p8022
+
+#Enter the password and you are connected to termux through your laptop
+
+#------------------End Connecting to termux through ssh----------------------------
+
+
+#6.  Arduino on Android Phone
+
+https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
+
+#7.  Matrices and Optimization Manual
 
 #Installing Python
 
