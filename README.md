@@ -79,7 +79,15 @@ ssh username@ipaddress -p8022
 
 https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
 
-#7.  Matrices and Optimization Manual
+#7.  AVR-Assembly 
+
+svn co https://github.com/gadepall/fwc-1/trunk/assembly
+
+#8.  AVR-GCC
+
+svn co https://github.com/gadepall/fwc-1/trunk/avr-gcc
+
+#9.  Matrices and Optimization Manual
 
 #Installing Python
 
