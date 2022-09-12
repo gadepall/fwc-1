@@ -42,7 +42,7 @@ svn co https://github.com/gadepall/training/trunk/math
 
 sudo apt install texlive-full gnumeric
 
-#5. SSH to Termux
+#5. SSH to Termux (Skip this if you are using a bluetooth keyboard)
 
 #Follow instructions in Section 1 of 
 
