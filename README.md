@@ -51,18 +51,23 @@ https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
 #On termux on your phone
 
 #Enter a simple password
+
 passwd
 
 #This will give you your username
+
 whoami
 
 #Find your ip address
+
 ifconfig 
 
 #Start ssh server on your mobile 
+
 sshd
 
 #On your laptop
+
 ssh username@ipaddress -p8022
 
 #Enter the password and you are connected to termux through your laptop
