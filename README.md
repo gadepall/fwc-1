@@ -42,7 +42,7 @@ sudo apt install texlive-full gnumeric
 
 cd /sdcard/Downloads/
 
-wget https://raw.githubusercontent.com/gadepall/termux/main/installation/rncom.sh
+wget https://raw.githubusercontent.com/gadepall/fwc-1/main/files/rncom.sh
 
 bash rncom.sh
 
