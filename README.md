@@ -38,9 +38,13 @@ https://github.com/gadepall/fwc-1/tree/main/ide
 
 #4.  LaTeX Report for Arduino IDE
 
-svn co https://github.com/gadepall/training/trunk/math
-
 sudo apt install texlive-full gnumeric
+
+cd /sdcard/Downloads/
+
+wget https://raw.githubusercontent.com/gadepall/termux/main/installation/rncom.sh
+
+bash rncom.sh
 
 #5. SSH to Termux (Skip this if you are using a bluetooth keyboard)
 
