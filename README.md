@@ -124,5 +124,17 @@ Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-
 
 https://github.com/gadepall/vaman/blob/master/arm/setup/main.pdf
 
-#Repsitory
+#Repository
+
 svn co https://github.com/gadepall/vaman/trunk/arm
+
+11.  FPGA
+
+#Setup
+
+https://github.com/gadepall/vaman/blob/master/fpga/setup/main.pdf
+
+#Repository
+
+svn co https://github.com/gadepall/vaman/trunk/fpga
+
