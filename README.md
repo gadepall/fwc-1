@@ -122,7 +122,7 @@ Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-
 
 #Setup
 
-https://github.com/gadepall/vaman/blob/master/arm/setup/vaman_setup_english.pdf
+https://github.com/gadepall/vaman/blob/master/arm/setup/main.pdf
 
 #Repsitory
 svn co https://github.com/gadepall/vaman/trunk/arm
