@@ -118,3 +118,11 @@ Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9uPnPqucP145qh9l7nGB3pm
 #Class 10, Coding
 Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-
 
+10.  ARM-GCC
+
+#Setup
+
+https://github.com/gadepall/vaman/blob/master/arm/setup/vaman_setup_english.pdf
+
+#Repsitory
+svn co https://github.com/gadepall/vaman/trunk/arm
