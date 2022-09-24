@@ -113,6 +113,8 @@ svn co https://github.com/gadepall/cbse-papers/trunk/2020/math/10/solutions 10
 
 Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9tzPopYNxV0GEb9cMwr2MJG
 
+https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-
+
 #Class 12, Sections 1 and 5
 
 https://github.com/gadepall/cbse-papers/blob/main/2020/math/12/solutions/main.pdf
