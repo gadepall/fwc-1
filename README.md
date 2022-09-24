@@ -83,13 +83,19 @@ ssh username@ipaddress -p8022
 
 https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
 
+https://spoken-tutorial.org/watch/Arduino/Seven+Segment+Display/English/
+
 #7.  AVR-Assembly 
 
 svn co https://github.com/gadepall/fwc-1/trunk/assembly
 
+https://spoken-tutorial.org/watch/Arduino/Assembly+programming+through+Arduino/English/
+
 #8.  AVR-GCC
 
 svn co https://github.com/gadepall/fwc-1/trunk/avr-gcc
+
+https://spoken-tutorial.org/watch/Arduino/AVR-GCC+programming+through+Arduino/English/
 
 #9.  Matrices and Optimization Manual
 
