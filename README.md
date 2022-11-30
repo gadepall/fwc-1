@@ -105,6 +105,12 @@ sudo apt install python3-pip python3-numpy python3-scipy python3-matplotlib pyth
 
 sudo pip3 install cvxpy
 
+#Matrix Analysis Book
+
+https://github.com/gadepall/matrix-analysis/blob/main/main.pdf
+
+git clone https://github.com/gadepall/matrix-analysis
+
 #Class 10, Section 5
 
 https://github.com/gadepall/cbse-papers/blob/main/2020/math/10/solutions/main.pdf
