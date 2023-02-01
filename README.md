@@ -62,30 +62,30 @@ wget https://raw.githubusercontent.com/gadepall/fwc-1/main/files/rncom.sh
 
 bash rncom.sh
 
+#7. Digital Design
 
-#7.  Arduino IDE
+#Digital Design Book
 
-https://github.com/gadepall/fwc-1/tree/main/ide
+https://github.com/gadepall/digital-design/blob/main/main.pdf
 
-#8.  Arduino on Android Phone
+git clone https://github.com/gadepall/digital-design
 
-https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
+#Spoken Tutorials
+
+#IDE
 
 https://spoken-tutorial.org/watch/Arduino/Seven+Segment+Display/English/
 
-#9.  AVR-Assembly 
-
-svn co https://github.com/gadepall/fwc-1/trunk/assembly
+# AVR-Assembly 
 
 https://spoken-tutorial.org/watch/Arduino/Assembly+programming+through+Arduino/English/
 
-#10.  AVR-GCC
-
-svn co https://github.com/gadepall/fwc-1/trunk/avr-gcc
+#  AVR-GCC
 
 https://spoken-tutorial.org/watch/Arduino/AVR-GCC+programming+through+Arduino/English/
 
-#11.  Matrices  
+
+#8.  Matrices  
 
 #Matrix Analysis Book
 
@@ -119,7 +119,7 @@ Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-
 
 https://github.com/gadepall/matrix-analysis
 
-12.  ARM-GCC
+9.  ARM-GCC
 
 #Setup
 
@@ -129,7 +129,7 @@ https://github.com/gadepall/vaman/blob/master/arm/setup/main.pdf
 
 svn co https://github.com/gadepall/vaman/trunk/arm
 
-13.  FPGA
+10.  FPGA
 
 #Setup
 
