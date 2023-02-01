@@ -1,6 +1,7 @@
 # fwc-1
 
 #1.  Install fdroid apk from
+
 https://www.f-droid.org/
 
 #Open fdroid on your mobile and install termux-terminal app from it
@@ -9,23 +10,33 @@ https://www.f-droid.org/
 #2. ------------------Install Termux----------------------------
 
 #Give termux access to your  user directory in android
+
 termux-setup-storage
 
 #Upgrade packages
+
 apt update && apt upgrade
 
 #Mandatory packages
+
 apt install build-essential openssh
+
 apt install curl git wget subversion 
+
 apt install silversearcher-ag imagemagick proot proot-distro python  bsdtar mutt nmap neovim
 #------------------End Install Termux----------------------------
 
 #3. ------------------ Installing ubuntu on termux----------------------------
 #Install ubuntu
+
 proot-distro install debian
+
 proot-distro login debian
+
 apt update && apt upgrade
+
 apt install apt-utils build-essential cmake neovim
+
 apt install git  wget  subversion imagemagick  nano  ranger 
 #------------------End Installing ubuntu on termux----------------------------
 
