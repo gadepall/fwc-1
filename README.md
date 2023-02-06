@@ -119,7 +119,17 @@ Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-
 
 https://github.com/gadepall/matrix-analysis
 
-9.  ARM-GCC
+9.  C Programming
+
+#Textbook
+
+https://github.com/gadepall/programming/blob/main/main.pdf
+
+#Repository
+
+git clone https://github.com/gadepall/programming
+
+10.  ARM-GCC
 
 #Setup
 
@@ -129,7 +139,7 @@ https://github.com/gadepall/vaman/blob/master/arm/setup/main.pdf
 
 svn co https://github.com/gadepall/vaman/trunk/arm
 
-10.  FPGA
+11.  FPGA
 
 #Setup
 
