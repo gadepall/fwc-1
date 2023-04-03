@@ -50,7 +50,7 @@ https://github.com/gadepall/termux/blob/main/neovim/neovim.txt
 
 #Neovim and Ranger instructions
 
-https://docs.google.com/spreadsheets/d/1Yx2RJ2wzbmdDdHaq0Kko0K7FPrdS0m7DWsyzDD_38WA/edit?usp=drivesdk
+https://iith-my.sharepoint.com/:x:/g/personal/gadepall_ee_iith_ac_in/EaI2vt4wm7hMmFyQz1AZXr4BWLd1KSZX290xKXfqk-qcgQ?e=KOoUTH
 
 #6.  LaTeX Report for Arduino IDE
 
