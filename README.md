@@ -45,8 +45,7 @@ apt install python3-pip python3-numpy python3-scipy python3-matplotlib python3-m
 #------------------ End installing python3 on termuxubuntu----------------------------
 
 #5.  Installing neovim and ranger
-
-https://github.com/gadepall/termux/blob/main/neovim/neovim.txt
+https://raw.githubusercontent.com/gadepall/fwc-1/main/installation/neovim.txt
 
 #Neovim and Ranger instructions
 
