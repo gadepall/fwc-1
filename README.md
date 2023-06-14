@@ -1,191 +1,230 @@
 # fwc-1
 
-#1.  Install fdroid apk from
+This repo is for Module 1 of the [Certificate Program in Future Wireless Communications](https://fwc.iith.ac.in) (FWC) by Indian Institute of Technology, Hyderabad (IITH).
 
-https://www.f-droid.org/
+## Table of Contents
 
-#Open fdroid on your mobile and install termux-terminal app from it
+[toc]
 
+## Setup
 
-#2. ------------------Install Termux----------------------------
+### Installing Apps
 
-#Give termux access to your  user directory in android
+1. Install [F-Droid](https://www.f-droid.org/).
+2. Open f-droid on your mobile and install the following apps:
+   - Termux
+   - Termux:API
 
-termux-setup-storage
+### Setting up Termux
 
-#Upgrade packages
+1. Give termux access to your user directory in Android.
 
-apt update && apt upgrade
+    ```bash
+    termux-setup-storage
+    ```
 
-#Mandatory packages
+2. Upgrade packages (any **one** command)
 
-apt install build-essential openssh
+    ```bash
+    pkg upg
+    ```
 
-apt install curl git wget subversion 
+    ```bash
+    apt update && apt update
+    ```
 
-apt install silversearcher-ag imagemagick proot proot-distro python  bsdtar mutt nmap neovim
-#------------------End Install Termux----------------------------
+3. Install mandatory packages (any **one** command)
 
-#3. ------------------ Installing ubuntu on termux----------------------------
-#Install ubuntu
+    ```bash
+    apt install build-essential openssh curl git wget subversion silversearcher-ag imagemagick proot proot-distro python bsdtar mutt nmap neovim
+    ```
 
-proot-distro install debian
+    ```bash
+    pkg in build-essential openssh curl git wget subversion silversearcher-ag imagemagick proot proot-distro python bsdtar mutt nmap neovim
+    ```
 
-proot-distro login debian
+### Installing and Setting up Ubuntu on Termux
 
-apt update && apt upgrade
+1. Install ubuntu
 
-apt install apt-utils build-essential cmake neovim
+    ```bash
+    proot-distro install debian
+    proot-distro login debian
+    ```
 
-apt install git  wget  subversion imagemagick  nano  ranger 
-#------------------End Installing ubuntu on termux----------------------------
+    Inside proot-distro
 
-#4. ------------------ Installing python3 on termuxubuntu----------------------------
-apt install python3-pip python3-numpy python3-scipy python3-matplotlib python3-mpmath python3-sympy python3-cvxopt
-#------------------ End installing python3 on termuxubuntu----------------------------
+    ```bash
+    apt update && apt upgrade
+    apt install apt-utils build-essential cmake neovim git wget subversion imagemagick nano ranger
+    ```
 
-#5.  Installing neovim and ranger
+2. Installing python3
 
-https://raw.githubusercontent.com/gadepall/fwc-1/main/installation/neovim.txt
+    ```bash
+    apt install python3-pip python3-numpy python3-scipy python3-matplotlib python3-mpmath python3-sympy python3-cvxopt
+    ```
 
-#Neovim and Ranger instructions
+3. Installing neovim and ranger
 
-https://iith-my.sharepoint.com/:x:/g/personal/gadepall_ee_iith_ac_in/EaI2vt4wm7hMmFyQz1AZXr4BWLd1KSZX290xKXfqk-qcgQ?e=KOoUTH
+    ```bash
+    apt install neovim ranger libxtst-dev libx11-dev python3-pynvim
+    pip3 install ueberzug
+    ```
 
-#6.  LaTeX Report for Arduino IDE
+    - Refer to this [document](https://raw.githubusercontent.com/gadepall/fwc-1/main/installation/neovim.txt) to setup neovim and ranger.
+    - For usage tips refer to this [document](https://iith-my.sharepoint.com/:x:/g/personal/gadepall_ee_iith_ac_in/EaI2vt4wm7hMmFyQz1AZXr4BWLd1KSZX290xKXfqk-qcgQ?e=KOoUTH).
 
-sudo apt install texlive-full gnumeric
+4. Installing LaTeX
 
-cd /sdcard/Downloads/
+   ```bash
+   apt install texlive-full gnumeric
+   ```
 
-wget https://raw.githubusercontent.com/gadepall/fwc-1/main/files/rncom.sh
+## Digital Design
 
-bash rncom.sh
+### Digital Design Book
 
-#7. Digital Design
+The book is present [here](https://github.com/gadepall/digital-design/blob/main/main.pdf).
 
-#Digital Design Book
+To obtain the sources:
 
-https://github.com/gadepall/digital-design/blob/main/main.pdf
-
+```bash
 git clone https://github.com/gadepall/digital-design
+```
 
-#Spoken Tutorials
+### Tutorials
 
-#IDE
+1. [Seven Segment Display](https://spoken-tutorial.org/watch/Arduino/Seven+Segment+Display/English/)
+2. [AVR-Assembly](https://spoken-tutorial.org/watch/Arduino/Assembly+programming+through+Arduino/English/)
+3. [AVR-GCC](https://spoken-tutorial.org/watch/Arduino/AVR-GCC+programming+through+Arduino/English/)
 
-https://spoken-tutorial.org/watch/Arduino/Seven+Segment+Display/English/
+### Video Tutorials
 
-# AVR-Assembly 
+The codes used in these videos and relevant references for each video are present at [goats-9/fwc-codes](https://github.com/goats-9/fwc-codes). These have been adapted from [gadepall/digital-design](https://github.com/gadepall/digital-design).
 
-https://spoken-tutorial.org/watch/Arduino/Assembly+programming+through+Arduino/English/
+1. [Arduino/PlatformIO](https://www.youtube.com/playlist?list=PLFAML6L4m0jNqTyHS-vdjfL-iLmvrvmX2)
+2. [AVR-Assembly](https://www.youtube.com/playlist?list=PLFAML6L4m0jP1pXZbOEx_XRBXMHzHbU-H)
+3. [AVR-GCC](https://www.youtube.com/playlist?list=PLFAML6L4m0jNxRPxL8O6QB8A28JAu_eGh)
+4. [Vaman-ESP32/PlatformIO](https://www.youtube.com/playlist?list=PLFAML6L4m0jNzB4Hut4SQQFD4axMZrrsc)
+5. [Vaman-FPGA](https://www.youtube.com/playlist?list=PLFAML6L4m0jPfbT2symV7FW_E-KGJTldW)
+6. [Vaman-ARM](https://www.youtube.com/playlist?list=PLFAML6L4m0jMAHY_B1I1eVhPjCSOE6wIL)
 
-#  AVR-GCC
+## Matrices
 
-https://spoken-tutorial.org/watch/Arduino/AVR-GCC+programming+through+Arduino/English/
+### Matrix Analysis Book
 
+The book is present [here](https://github.com/gadepall/matrix-analysis/blob/main/main.pdf).
 
-#8.  Matrices  
+To obtain the sources:
 
-#Matrix Analysis Book
-
-https://github.com/gadepall/matrix-analysis/blob/main/main.pdf
-
+```bash
 git clone https://github.com/gadepall/matrix-analysis
+```
 
-#Class 10, Section 5
+## CBSE Math Solutions
 
-https://github.com/gadepall/cbse-papers/blob/main/2020/math/10/solutions/main.pdf
+The book is available [here](https://raw.githubusercontent.com/gadepall/cbse-math/main/main.pdf).
 
-svn co https://github.com/gadepall/cbse-papers/trunk/2020/math/10/solutions 10
+To clone the sources:
 
-Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9tzPopYNxV0GEb9cMwr2MJG
+```bash
+git clone https://github.com/gadepall/cbse-math
+```
 
-https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-
+### Previous Year Questions
 
-#Class 12, Sections 1 and 5
+Previous year papers solutions are present at [gadepall/cbse-papers](https://github.com/gadepall/cbse-papers).
 
-https://github.com/gadepall/cbse-papers/blob/main/2020/math/12/solutions/main.pdf
+To clone the sources:
 
-svn co https://github.com/gadepall/cbse-papers/trunk/2020/math/12/solutions 12
+```bash
+git clone https://github.com/gadepall/cbse-papers
+```
 
-Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9uPnPqucP145qh9l7nGB3pm
+### Video Explanations
 
-#Class 10, Python Coding
+1. [CBSE Class 10](https://youtube.com/playlist?list=PLKN4kghPKZ9tzPopYNxV0GEb9cMwr2MJG)
+2. [CBSE Class 10, Using Python](https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-)
+3. [CBSE Class 12](https://youtube.com/playlist?list=PLKN4kghPKZ9uPnPqucP145qh9l7nGB3pm)
 
-Youtube: https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-
+## C Programming
 
-#Textbook
+The textbook is present [here](https://raw.githubusercontent.com/gadepall/programming/main/main.pdf).
 
-https://github.com/gadepall/matrix-analysis
+To clone the sources:
 
-9.  C Programming
-
-#Textbook
-
-https://github.com/gadepall/programming/blob/main/main.pdf
-
-#Repository
-
+```bash
 git clone https://github.com/gadepall/programming
+```
 
-10.  ARM-GCC
+## Vaman
 
-#Setup
+### ARM-GCC
 
-https://github.com/gadepall/vaman/blob/master/arm/setup/main.pdf
+The setup manual is present [here](https://raw.githubusercontent.com/gadepall/vaman/master/arm/setup/main.pdf).
 
-#Repository
+To obtain the relevant sources:
 
+```bash
 svn co https://github.com/gadepall/vaman/trunk/arm
+```
 
-11.  FPGA
+### FPGA
 
-#Setup
+The setup manual is present [here](https://raw.githubusercontent.com/gadepall/vaman/master/fpga/setup/main.pdf).
 
-https://github.com/gadepall/vaman/blob/master/fpga/setup/main.pdf
+To obtain the relevant sources:
 
-#Repository
-
+```bash
 svn co https://github.com/gadepall/vaman/trunk/fpga
---------------------------------------------------------------------------END of Module 1--------------------------------
+```
 
-#Installing wsl for windows users
+## Connecting to Termux via Laptop
 
-https://ubuntu.com/wsl
+### SSH
 
-#Access usb over wsl
+**NOTE**: Skip this if you are using a bluetooth keyboard
 
-https://docs.microsoft.com/en-us/windows/wsl/connect-usb
-#5. SSH to Termux (Skip this if you are using a bluetooth keyboard)
+1. Follow instructions in Section 1 of the [manual](https://raw.githubusercontent.com/gadepall/fwc-1/main/installation/main.pdf).
+2. On termux on your phone, enter a simple password
 
-#Follow instructions in Section 1 of 
+    ```bash
+    passwd
+    ```
 
-https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf
+3. This command will give you your username
 
-#On termux on your phone
+    ```bash
+    whoami
+    ```
 
-#Enter a simple password
+4. Find your ip address
 
-passwd
+    ```bash
+    ifconfig
+    ```
 
-#This will give you your username
+5. Start ssh server on your mobile
 
-whoami
+    ```bash
+    sshd
+    ```
 
-#Find your ip address
+6. On your laptop, enter the following at a terminal
 
-ifconfig 
+    ```bash
+    ssh username@ipaddress -p8022
+    ```
 
-#Start ssh server on your mobile 
+7. Enter the password and you are connected to termux through your laptop.
 
-sshd
+### Scrcpy
 
-#On your laptop
+Refer to [Genymobile/scrcpy#get-the-app](https://github.com/Genymobile/scrcpy#get-the-app) for instructions.
 
-ssh username@ipaddress -p8022
+## Installing WSL for Windows Users (NOT RECOMMENDED)
 
-#Enter the password and you are connected to termux through your laptop
+Installation instructions are present at this [link](https://ubuntu.com/wsl).
 
-#------------------End Connecting to termux through ssh----------------------------
-
+To access USB over WSL, refer to this [link](https://docs.microsoft.com/en-us/windows/wsl/connect-usb).
