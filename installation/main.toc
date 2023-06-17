@@ -1,3 +1,0 @@
-\contentsline {section}{\numberline {1}Termux}{1}{}%
-\contentsline {section}{\numberline {2}Platformio }{1}{}%
-\contentsline {section}{\numberline {3}Arduino Droid}{1}{}%
