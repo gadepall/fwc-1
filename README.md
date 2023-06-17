@@ -2,10 +2,6 @@
 
 This repo is for Module 1 of the [Certificate Program in Future Wireless Communications](https://fwc.iith.ac.in) (FWC) by Indian Institute of Technology, Hyderabad (IITH).
 
-## Table of Contents
-
-[toc]
-
 ## Setup
 
 ### Installing Apps
@@ -124,7 +120,7 @@ git clone https://github.com/gadepall/matrix-analysis
 
 ## CBSE Math Solutions
 
-The book is available [here](https://raw.githubusercontent.com/gadepall/cbse-math/main/main.pdf).
+The book is available [here](https://github.com/gadepall/cbse-math/blob/main/main.pdf).
 
 To clone the sources:
 
@@ -150,7 +146,7 @@ git clone https://github.com/gadepall/cbse-papers
 
 ## C Programming
 
-The textbook is present [here](https://raw.githubusercontent.com/gadepall/programming/main/main.pdf).
+The textbook is present [here](https://github.com/gadepall/programming/blob/main/main.pdf).
 
 To clone the sources:
 
@@ -162,7 +158,7 @@ git clone https://github.com/gadepall/programming
 
 ### ARM-GCC
 
-The setup manual is present [here](https://raw.githubusercontent.com/gadepall/vaman/master/arm/setup/main.pdf).
+The setup manual is present [here](https://github.com/gadepall/vaman/blob/master/arm/setup/main.pdf).
 
 To obtain the relevant sources:
 
@@ -172,7 +168,7 @@ svn co https://github.com/gadepall/vaman/trunk/arm
 
 ### FPGA
 
-The setup manual is present [here](https://raw.githubusercontent.com/gadepall/vaman/master/fpga/setup/main.pdf).
+The setup manual is present [here](https://github.com/gadepall/vaman/blob/master/fpga/setup/main.pdf).
 
 To obtain the relevant sources:
 
@@ -186,7 +182,7 @@ svn co https://github.com/gadepall/vaman/trunk/fpga
 
 **NOTE**: Skip this if you are using a bluetooth keyboard
 
-1. Follow instructions in Section 1 of the [manual](https://raw.githubusercontent.com/gadepall/fwc-1/main/installation/main.pdf).
+1. Follow instructions in Section 1 of the [manual](https://github.com/gadepall/fwc-1/blob/main/installation/main.pdf).
 2. On termux on your phone, enter a simple password
 
     ```bash
@@ -214,7 +210,7 @@ svn co https://github.com/gadepall/vaman/trunk/fpga
 6. On your laptop, enter the following at a terminal
 
     ```bash
-    ssh username@ipaddress -p8022
+    ssh username@ipaddress -p 8022
     ```
 
 7. Enter the password and you are connected to termux through your laptop.
