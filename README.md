@@ -210,7 +210,7 @@ svn co https://github.com/gadepall/vaman/trunk/fpga
 6. On your laptop, enter the following at a terminal
 
     ```bash
-    ssh username@ipaddress -p8022
+    ssh username@ipaddress -p 8022
     ```
 
 7. Enter the password and you are connected to termux through your laptop.
