@@ -1,0 +1,24 @@
+From 89aae4d1e59fba9f7f09382b3b5f788f0bc69cd0 Mon Sep 17 00:00:00 2001
+From: Gautam Singh <goats.singh@gmail.com>
+Date: Sat, 10 Jun 2023 08:59:00 +0530
+Subject: [PATCH] Include <limits> to compile
+
+---
+ passes/sat/freduce.cc | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/passes/sat/freduce.cc b/passes/sat/freduce.cc
+index 5dfd7bd3f..4ac97f852 100644
+--- a/passes/sat/freduce.cc
++++ b/passes/sat/freduce.cc
+@@ -27,6 +27,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <algorithm>
++#include <limits>
+ 
+ USING_YOSYS_NAMESPACE
+ PRIVATE_NAMESPACE_BEGIN
+-- 
+2.34.1
+
