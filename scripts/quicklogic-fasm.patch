@@ -1,0 +1,21 @@
+From a1f2dcf86c748fc4ee44ea4e795d71323e908fd7 Mon Sep 17 00:00:00 2001
+From: Gautam Singh <goats.singh@gmail.com>
+Date: Sat, 10 Jun 2023 08:56:37 +0530
+Subject: [PATCH] Modify requirements.txt for pip install
+
+---
+ requirements.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/requirements.txt b/requirements.txt
+index 0a99915..d422ebc 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,2 +1,2 @@
+--e git://github.com/symbiflow/fasm.git#egg=fasm
+--e git://github.com/antmicro/quicklogic-fasm-utils.git#egg=fasm-utils
++-e git+https://github.com/symbiflow/fasm.git#egg=fasm
++-e git+https://github.com/antmicro/quicklogic-fasm-utils.git#egg=fasm-utils
+-- 
+2.34.1
+

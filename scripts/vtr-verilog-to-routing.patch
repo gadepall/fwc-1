@@ -1,0 +1,74 @@
+From 51f3326ec1b2a7a95c3b0e3fddcf7ce2ac616c66 Mon Sep 17 00:00:00 2001
+From: Gautam Singh <goats.singh@gmail.com>
+Date: Sat, 10 Jun 2023 08:59:50 +0530
+Subject: [PATCH] Modify codes to compile will C11
+
+---
+ libs/EXTERNAL/libargparse/src/argparse.cpp | 2 +-
+ libs/EXTERNAL/libcatch/catch.hpp           | 6 +++---
+ libs/libvtrutil/src/vtr_memory.h           | 6 +++++-
+ 3 files changed, 9 insertions(+), 5 deletions(-)
+
+diff --git a/libs/EXTERNAL/libargparse/src/argparse.cpp b/libs/EXTERNAL/libargparse/src/argparse.cpp
+index a223f393d..dbc3bc56e 100644
+--- a/libs/EXTERNAL/libargparse/src/argparse.cpp
++++ b/libs/EXTERNAL/libargparse/src/argparse.cpp
+@@ -4,7 +4,7 @@
+ #include <cassert>
+ #include <string>
+ #include <set>
+-
++#include <limits>
+ #include "argparse.hpp"
+ #include "argparse_util.hpp"
+ 
+diff --git a/libs/EXTERNAL/libcatch/catch.hpp b/libs/EXTERNAL/libcatch/catch.hpp
+index 849c53c13..2f0904069 100644
+--- a/libs/EXTERNAL/libcatch/catch.hpp
++++ b/libs/EXTERNAL/libcatch/catch.hpp
+@@ -6467,7 +6467,7 @@ namespace Catch {
+         static bool isSet;
+         static struct sigaction oldSigActions [sizeof(signalDefs)/sizeof(SignalDefs)];
+         static stack_t oldSigStack;
+-        static char altStackMem[SIGSTKSZ];
++        static char altStackMem[(1<<20)];
+ 
+         static void handleSignal( int sig ) {
+             std::string name = "<unknown signal>";
+@@ -6487,7 +6487,7 @@ namespace Catch {
+             isSet = true;
+             stack_t sigStack;
+             sigStack.ss_sp = altStackMem;
+-            sigStack.ss_size = SIGSTKSZ;
++            sigStack.ss_size = (1<<20);
+             sigStack.ss_flags = 0;
+             sigaltstack(&sigStack, &oldSigStack);
+             struct sigaction sa = { 0 };
+@@ -6518,7 +6518,7 @@ namespace Catch {
+     bool FatalConditionHandler::isSet = false;
+     struct sigaction FatalConditionHandler::oldSigActions[sizeof(signalDefs)/sizeof(SignalDefs)] = {};
+     stack_t FatalConditionHandler::oldSigStack = {};
+-    char FatalConditionHandler::altStackMem[SIGSTKSZ] = {};
++    char FatalConditionHandler::altStackMem[(1<<20)] = {};
+ 
+ } // namespace Catch
+ 
+diff --git a/libs/libvtrutil/src/vtr_memory.h b/libs/libvtrutil/src/vtr_memory.h
+index f7bf4670c..094c49112 100644
+--- a/libs/libvtrutil/src/vtr_memory.h
++++ b/libs/libvtrutil/src/vtr_memory.h
+@@ -106,6 +106,10 @@ struct aligned_allocator {
+     }
+ };
+ 
+-} // namespace vtr
++template <typename T>
++bool operator==(const aligned_allocator<T>&, const aligned_allocator<T>&) {
++    return true;
++}
+ 
++} // namespace vtr
+ #endif
+-- 
+2.34.1
+
