@@ -85,20 +85,20 @@ This repo is for Module 1 of the [Certificate Program in Future Wireless Communi
 
 ## Latex and Python
 
-1. Latex Template
+### Latex Template
 
-    ```bash
-    svn co https://github.com/gadepall/training/math
-    ```
-    ```bash
-    texfot pdflatex main.tex
-    ```
+```bash
+svn co https://github.com/gadepall/training/math
+```
+```bash
+texfot pdflatex main.tex
+```
 
-2. Python
+### Python
 
-    ```bash
-    python3 codes/tri_sss.py
-    ```
+```bash
+python3 codes/tri_sss.py
+```
 
 ## Digital Design
 
