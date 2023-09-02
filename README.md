@@ -83,6 +83,23 @@ This repo is for Module 1 of the [Certificate Program in Future Wireless Communi
    apt install texlive-full gnumeric
    ```
 
+## Latex and Python
+
+### Latex Template
+
+    ```bash
+    svn co https://github.com/gadepall/training/math
+    ```
+    ```bash
+    texfot pdflatex main.tex
+    ```
+
+### Python
+
+    ```bash
+    python3 codes/tri_sss.py
+    ```
+
 ## Digital Design
 
 ### Digital Design Book
