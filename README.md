@@ -129,53 +129,6 @@ The codes used in these videos and relevant references for each video are presen
 5. [Vaman-FPGA](https://www.youtube.com/playlist?list=PLFAML6L4m0jPfbT2symV7FW_E-KGJTldW)
 6. [Vaman-ARM](https://www.youtube.com/playlist?list=PLFAML6L4m0jMAHY_B1I1eVhPjCSOE6wIL)
 
-## Matrices
-
-### Matrix Analysis Book
-
-The book is present [here](https://github.com/gadepall/matrix-analysis/blob/main/main.pdf).
-
-To obtain the sources:
-
-```bash
-git clone https://github.com/gadepall/matrix-analysis
-```
-
-## CBSE Math Solutions
-
-The book is available [here](https://github.com/gadepall/cbse-math/blob/main/main.pdf).
-
-To clone the sources:
-
-```bash
-git clone https://github.com/gadepall/cbse-math
-```
-
-### Previous Year Questions
-
-Previous year papers solutions are present at [gadepall/cbse-papers](https://github.com/gadepall/cbse-papers).
-
-To clone the sources:
-
-```bash
-git clone https://github.com/gadepall/cbse-papers
-```
-
-### Video Explanations
-
-1. [CBSE Class 10](https://youtube.com/playlist?list=PLKN4kghPKZ9tzPopYNxV0GEb9cMwr2MJG)
-2. [CBSE Class 10, Using Python](https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-)
-3. [CBSE Class 12](https://youtube.com/playlist?list=PLKN4kghPKZ9uPnPqucP145qh9l7nGB3pm)
-
-## C Programming
-
-The textbook is present [here](https://github.com/gadepall/programming/blob/main/main.pdf).
-
-To clone the sources:
-
-```bash
-git clone https://github.com/gadepall/programming
-```
 
 ## Vaman
 
@@ -252,6 +205,8 @@ To access USB over WSL, refer to this [link](https://docs.microsoft.com/en-us/wi
 
 ## Math Computing
 
+### Geometry
+
 #The book is present [here](https://github.com/gadepall/geometry/blob/main/main.pdf).
 
 To obtain the sources:
@@ -259,4 +214,51 @@ To obtain the sources:
 ```bash
 git clone https://github.com/gadepall/geometry
 ```
-## Book
+
+## Matrices
+
+### Matrix Analysis Book
+
+The book is present [here](https://github.com/gadepall/matrix-analysis/blob/main/main.pdf).
+
+To obtain the sources:
+
+```bash
+git clone https://github.com/gadepall/matrix-analysis
+```
+
+## CBSE Math Solutions
+
+The book is available [here](https://github.com/gadepall/cbse-math/blob/main/main.pdf).
+
+To clone the sources:
+
+```bash
+git clone https://github.com/gadepall/cbse-math
+```
+
+### Previous Year Questions
+
+Previous year papers solutions are present at [gadepall/cbse-papers](https://github.com/gadepall/cbse-papers).
+
+To clone the sources:
+
+```bash
+git clone https://github.com/gadepall/cbse-papers
+```
+
+### Video Explanations
+
+1. [CBSE Class 10](https://youtube.com/playlist?list=PLKN4kghPKZ9tzPopYNxV0GEb9cMwr2MJG)
+2. [CBSE Class 10, Using Python](https://youtube.com/playlist?list=PLKN4kghPKZ9t37g-oL8l0LAPGMK2bL7B-)
+3. [CBSE Class 12](https://youtube.com/playlist?list=PLKN4kghPKZ9uPnPqucP145qh9l7nGB3pm)
+
+## C Programming
+
+The textbook is present [here](https://github.com/gadepall/programming/blob/main/main.pdf).
+
+To clone the sources:
+
+```bash
+git clone https://github.com/gadepall/programming
+```
