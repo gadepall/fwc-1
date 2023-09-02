@@ -45,6 +45,8 @@ This repo is for Module 1 of the [Certificate Program in Future Wireless Communi
 
     ```bash
     proot-distro install debian
+    ```
+    ```bash
     proot-distro login debian
     ```
 
@@ -52,6 +54,8 @@ This repo is for Module 1 of the [Certificate Program in Future Wireless Communi
 
     ```bash
     apt update && apt upgrade
+    ```
+    ```bash
     apt install apt-utils build-essential cmake neovim git wget subversion imagemagick nano ranger
     ```
 
@@ -65,8 +69,11 @@ This repo is for Module 1 of the [Certificate Program in Future Wireless Communi
 
     ```bash
     apt install neovim ranger libxtst-dev libx11-dev python3-pynvim
+    ```
+    ```bash
     pip3 install ueberzug
     ```
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
     - Refer to this [document](https://raw.githubusercontent.com/gadepall/fwc-1/main/installation/neovim.txt) to setup neovim and ranger.
     - For usage tips refer to this [document](https://iith-my.sharepoint.com/:x:/g/personal/gadepall_ee_iith_ac_in/EaI2vt4wm7hMmFyQz1AZXr4BWLd1KSZX290xKXfqk-qcgQ?e=KOoUTH).
