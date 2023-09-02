@@ -1,6 +1,6 @@
-# fwc-1
+This repo is for all modules of the [Certificate Program in Future Wireless Communications](https://fwc.iith.ac.in) (FWC) by Indian Institute of Technology, Hyderabad (IITH).
 
-This repo is for Module 1 of the [Certificate Program in Future Wireless Communications](https://fwc.iith.ac.in) (FWC) by Indian Institute of Technology, Hyderabad (IITH).
+# fwc-1
 
 ## Setup
 
@@ -249,3 +249,14 @@ Installation instructions are present at this [link](https://ubuntu.com/wsl).
 To access USB over WSL, refer to this [link](https://docs.microsoft.com/en-us/windows/wsl/connect-usb).
 
 # fwc-2
+
+## Math Computing
+
+#The book is present [here](https://github.com/gadepall/geometry/blob/main/main.pdf).
+
+To obtain the sources:
+
+```bash
+git clone https://github.com/gadepall/geometry
+```
+## Book
