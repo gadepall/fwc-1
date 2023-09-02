@@ -247,3 +247,5 @@ Refer to [Genymobile/scrcpy#get-the-app](https://github.com/Genymobile/scrcpy#ge
 Installation instructions are present at this [link](https://ubuntu.com/wsl).
 
 To access USB over WSL, refer to this [link](https://docs.microsoft.com/en-us/windows/wsl/connect-usb).
+
+# fwc-2
