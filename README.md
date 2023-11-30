@@ -70,11 +70,6 @@ This repo is for all modules of the [Certificate Program in Future Wireless Comm
     ```bash
     apt install neovim ranger libxtst-dev libx11-dev python3-pynvim
     ```
-    ```bash
-    python3 -m venv gvenv 
-    source gvenv/bin/activate
-    pip3 install ueberzug
-    ```
 
     - Refer to this [document](https://raw.githubusercontent.com/gadepall/fwc-1/main/installation/neovim.txt) to setup neovim and ranger.
     - For usage tips refer to this [document](https://iith-my.sharepoint.com/:x:/g/personal/gadepall_ee_iith_ac_in/EaI2vt4wm7hMmFyQz1AZXr4BWLd1KSZX290xKXfqk-qcgQ?e=KOoUTH).
@@ -132,6 +127,7 @@ The codes used in these videos and relevant references for each video are presen
 6. [Vaman-ARM](https://www.youtube.com/playlist?list=PLFAML6L4m0jMAHY_B1I1eVhPjCSOE6wIL)
 
 
+<!---
 ## Vaman
 
 ### ARM-GCC
@@ -153,6 +149,7 @@ To obtain the relevant sources:
 ```bash
 svn co https://github.com/gadepall/vaman/trunk/fpga
 ```
+--->
 
 ## Connecting to Termux via Laptop
 
