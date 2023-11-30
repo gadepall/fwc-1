@@ -109,7 +109,7 @@ To obtain the sources:
 git clone https://github.com/gadepall/digital-design
 ```
 
-### Tutorials
+### Spoken Tutorials
 
 1. [Seven Segment Display](https://spoken-tutorial.org/watch/Arduino/Seven+Segment+Display/English/)
 2. [AVR-Assembly](https://spoken-tutorial.org/watch/Arduino/Assembly+programming+through+Arduino/English/)
