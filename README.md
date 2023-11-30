@@ -56,7 +56,7 @@ This repo is for all modules of the [Certificate Program in Future Wireless Comm
     apt update && apt upgrade
     ```
     ```bash
-    apt install apt-utils build-essential cmake neovim git wget subversion imagemagick nano ranger
+    apt install apt-utils build-essential cmake neovim git wget subversion imagemagick nano ranger python3-venv
     ```
 
 2. Installing python3
@@ -71,6 +71,8 @@ This repo is for all modules of the [Certificate Program in Future Wireless Comm
     apt install neovim ranger libxtst-dev libx11-dev python3-pynvim
     ```
     ```bash
+    python3 -m venv gvenv 
+    source gvenv/bin/activate
     pip3 install ueberzug
     ```
 
