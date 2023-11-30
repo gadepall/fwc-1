@@ -214,6 +214,7 @@ To obtain the sources:
 git clone https://github.com/gadepall/geometry
 ```
 
+<!---
 ## Matrices
 
 ### Matrix Analysis Book
@@ -261,3 +262,4 @@ To clone the sources:
 ```bash
 git clone https://github.com/gadepall/programming
 ```
+--->
