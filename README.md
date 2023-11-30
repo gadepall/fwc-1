@@ -126,6 +126,19 @@ The codes used in these videos and relevant references for each video are presen
 5. [Vaman-FPGA](https://www.youtube.com/playlist?list=PLFAML6L4m0jPfbT2symV7FW_E-KGJTldW)
 6. [Vaman-ARM](https://www.youtube.com/playlist?list=PLFAML6L4m0jMAHY_B1I1eVhPjCSOE6wIL)
 
+# fwc-2
+
+## Math Computing
+
+### Geometry
+
+#The book is present [here](https://github.com/gadepall/geometry/blob/main/main.pdf).
+
+To obtain the sources:
+
+```bash
+git clone https://github.com/gadepall/geometry
+```
 
 <!---
 ## Vaman
@@ -200,19 +213,6 @@ Installation instructions are present at this [link](https://ubuntu.com/wsl).
 
 To access USB over WSL, refer to this [link](https://docs.microsoft.com/en-us/windows/wsl/connect-usb).
 
-# fwc-2
-
-## Math Computing
-
-### Geometry
-
-#The book is present [here](https://github.com/gadepall/geometry/blob/main/main.pdf).
-
-To obtain the sources:
-
-```bash
-git clone https://github.com/gadepall/geometry
-```
 
 <!---
 ## Matrices
