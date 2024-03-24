@@ -26,7 +26,7 @@ This repo is for all modules of the [Certificate Program in Future Wireless Comm
     ```
 
     ```bash
-    apt update && apt update
+    apt update && apt upgrade
     ```
 
 3. Install mandatory packages (any **one** command)
