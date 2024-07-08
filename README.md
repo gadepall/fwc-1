@@ -41,7 +41,7 @@ This repo is for all modules of the [Certificate Program in Future Wireless Comm
 
 ### Installing and Setting up Debian on Termux
 
-1. Install ubuntu
+1. Install debian
 
     ```bash
     proot-distro install debian
