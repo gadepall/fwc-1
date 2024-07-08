@@ -39,7 +39,7 @@ This repo is for all modules of the [Certificate Program in Future Wireless Comm
     pkg in build-essential openssh curl git wget subversion silversearcher-ag imagemagick proot proot-distro python bsdtar mutt nmap neovim
     ```
 
-### Installing and Setting up Ubuntu on Termux
+### Installing and Setting up Debian on Termux
 
 1. Install ubuntu
 
