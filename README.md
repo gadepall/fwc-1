@@ -85,7 +85,7 @@ This repo is for all modules of the [Certificate Program in Future Wireless Comm
 ### Latex Template
 
 ```bash
-svn co https://github.com/gadepall/training/trunk/math
+git clone  https://github.com/gadepall/training/
 ```
 ```bash
 texfot pdflatex main.tex
