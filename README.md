@@ -88,6 +88,9 @@ This repo is for all modules of the [Certificate Program in Future Wireless Comm
 git clone  https://github.com/gadepall/training/
 ```
 ```bash
+cd training/math
+```
+```bash
 texfot pdflatex main.tex
 ```
 
